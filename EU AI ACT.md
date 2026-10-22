@@ -1,90 +1,109 @@
-# Regulatory Framework: HR + EU AI Act
+# EU AI Act: HR Compliance Perspective
 
-## Template for Regulatory Analysis
+## Overview
 
-### GDPR Compliance Layer
-
-**Personal Data Processing:**
-- Data category: [specify: performance, salary, health, etc.]
-- Legal basis: [Article 6: consent, contract, legal obligation, vital interests, public task, legitimate interests]
-- Processing purpose: [explicit, specific, legitimate]
-- Retention period: [time-bound, measurable]
-- Data subject rights: [access, rectification, erasure, portability, objection]
-
-**Audit Trail Requirement (Article 5(2)):**
-- Timestamp of each processing operation
-- Data categories involved
-- Processing method (manual, algorithmic, AI-driven)
-- Outcome/decision recorded
-- Retention per organizational retention policy
+The EU AI Act (2024) classifies HR AI systems as **high-risk** when used for recruitment, performance evaluation, compensation, or termination decisions. This document outlines binding requirements.
 
 ---
 
-### EU AI Act Compliance Layer (Articles 5–6)
+## Scope: HR High-Risk AI Systems
 
-**High-Risk HR AI Systems:**
-- Recruitment & selection automation
-- Employee performance evaluation
-- Compensation & promotion decisions
-- Termination & restructuring recommendations
-
-**Mandatory Safeguards:**
-1. **Transparency:** Model version, decision confidence, input features disclosed
-2. **Human Oversight:** Automated decisions require human review before execution
-3. **Appeal Mechanism:** Employee right to contest AI-driven decision
-4. **Non-Discrimination:** Bias testing on protected characteristics (gender, ethnicity, age)
-5. **Documentation:** Technical documentation + impact assessment
+**Applies to:**
+- Candidate screening & ranking
+- Employee performance scoring
+- Compensation & promotion recommendations
+- Termination flagging
+- Workforce restructuring decisions
 
 ---
 
-### Combined HR + EU AI Act Compliance Checklist
+## Key Requirements (Articles 5–6)
 
-| Control | GDPR Article | EU AI Act Article | Implementation |
-|---------|--------------|-------------------|-----------------|
-| **Consent for AI processing** | 6, 7 | 5 | Explicit opt-in for AI-driven decisions |
-| **Automated decision logging** | 22 | 5, 6 | Every AI output logged with reasoning |
-| **Right to human review** | 22 | 6 | Mandatory human validation before action |
-| **Data minimization** | 5(1)(c) | 5 | Only necessary HR data inputs to model |
-| **Non-discrimination audit** | – | 5 | Regular bias testing on protected classes |
-| **Appeal/remedy process** | 22 | 6 | Documented appeal procedure >30 days |
-| **Data retention limit** | 5(1)(e) | – | HR data deleted per policy (typ. 12 months) |
-| **Audit trail** | 5(2) | 6 | Full compliance log with timestamps |
+### 1. Transparency & Disclosure
+- Employees must know AI is used in decisions affecting them
+- Model version and decision logic documented
+- Confidence scores provided
 
----
+### 2. Human Oversight
+- No automated HR decision without human review
+- Manager must validate AI output before action
+- Decision and reasoning logged
 
-### Risk Mitigation Examples
+### 3. Appeal & Remedy
+- Employee right to contest AI decision
+- Documented appeal process, >30 days to respond
+- Escalation to management/HR available
 
-**Example 1: Automated Hiring**
-- ❌ **Violation:** AI model selects candidates without human review
-- ✅ **Mitigation:** HR manager reviews AI ranking, provides final decision, logs reasoning
+### 4. Non-Discrimination Testing
+- Regular bias audits on protected characteristics (gender, age, ethnicity, religion)
+- Audit results documented
+- Corrective action if bias detected
 
-**Example 2: Salary Adjustment**
-- ❌ **Violation:** AI recommends salary cuts based on performance score alone
-- ✅ **Mitigation:** AI provides recommendation with confidence score, manager verifies, employee can appeal
+### 5. Data Minimization
+- Only necessary HR data fed to model
+- No health, ethnicity, religious belief unless legally justified
+- Sensitive data encrypted or excluded
 
-**Example 3: Performance Classification**
-- ❌ **Violation:** System automatically flags poor performers for termination
-- ✅ **Mitigation:** System alerts manager, manager reviews with employee, decision logged, appeal option available
-
----
-
-### Regulatory Reporting
-
-**GDPR Data Processing Agreement (DPA):**
-- AI model classified as "processor" or "joint controller"
-- Responsibilities: data security, breach notification, audit cooperation
-
-**EU AI Act Compliance Report:**
-- Quarterly audit of HR AI decisions
-- Bias testing results
-- Appeal/override statistics
-- Any incidents or deviations
+### 6. Audit Trail & Documentation
+- Every AI decision logged with timestamp, input, output, human review
+- Technical documentation of model behavior
+- Impact assessment maintained
 
 ---
 
-## Notes
+## Prohibited Practices
 
-- This template applies to **on-premises HR AI systems only**
-- Update annually or when regulations change
-- All processing must be documented in PostgreSQL audit trail
-- All decisions are subject to retrospective review
+❌ Fully automated hiring without human review  
+❌ Secret surveillance scoring of employees  
+❌ Automated termination recommendations without appeal  
+❌ Using sensitive data (health, ethnicity) without explicit consent  
+❌ No-audit automated decisions  
+
+---
+
+## Compliance Checklist
+
+- [ ] AI usage disclosed to affected employees
+- [ ] Human manager reviews all AI recommendations
+- [ ] Appeal mechanism documented
+- [ ] Bias testing conducted quarterly
+- [ ] Audit logs retained 12+ months
+- [ ] No sensitive data in model inputs
+- [ ] Data protection impact assessment completed
+
+---
+
+## Penalties
+
+**Non-compliance fines:** Up to **€20 million or 4% of global annual turnover**, whichever is higher.
+
+**Common violations:**
+- Missing human oversight → immediate fine
+- No audit trail → regulatory investigation
+- Discrimination bias detected → suspension + fine
+- Employee appeal denied → GDPR violation (Article 22)
+
+---
+
+## Implementation Example
+
+**Scenario:** AI recommends salary increase for employee
+
+✅ **Compliant:**
+1. AI analyzes performance data → generates recommendation
+2. Manager reviews AI output + confidence score
+3. Manager decides + documents reasoning
+4. Employee notified; appeal mechanism explained
+5. All steps logged in audit trail
+
+❌ **Non-Compliant:**
+1. AI automatically applies salary increase
+2. Employee discovers change in payslip
+3. No appeal option
+4. No audit trail
+
+---
+
+## Bottom Line
+
+EU AI Act demands HR AI systems be **transparent, contestable, and auditable**. No "black box" decisions. Employee dignity & rights are protected by design.
